@@ -16,6 +16,10 @@
 
 - [dotenv](https://www.npmjs.com/package/dotenv) \_ _"dotenv": "^8.2.0",_
 
+<span style= "color:green"> **Dev Dependencies (optional);** </span>
+
+<span style="color:yellow">1.</span> "nodemon": "^2.0.3"\_
+
 <span style= "color:green"> **Installation;** </span>
 
 <span style="color:yellow">1.</span> _npm i mysql2_
