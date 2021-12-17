@@ -48,15 +48,15 @@
 
 Video Example:
 <br>
-insert link
+https://drive.google.com/file/d/1oPiz6XKhNK61GTjaju6UPCSAdVE44Lft/view
 
 GitHub repo:
 <br>
-insert link
+https://github.com/SmithCray/eShopper
 
 Git Profile:
 <br>
-insert link
+https://github.com/SmithCray
 
 <br>
 
