@@ -28,9 +28,11 @@
 
 <span style="color:yellow">3.</span> _npm i dotenv_
 
-<span style= "color:green"> **Console Command;** </span>
+<span style= "color:green"> **Console Commands;** </span>
 
-<span style="color:yellow">1.</span> node index.js
+<span style="color:yellow">1.</span> npm run seed
+
+<span style="color:yellow">2.</span> nodemon server.js
 
 <br>
 

@@ -5,7 +5,12 @@ const { update } = require("../../models/Product");
 // The `/api/categories` endpoint
 
 router.get("/", (req, res) => {
-  Category.findAll().then((categoryData) => {
+  Category.findAll({
+    include: {
+      model: Product,
+      attributes: ["id", "product_name", "price", "stock", "category_id"],
+    },
+  }).then((categoryData) => {
     res.json(categoryData);
   });
   // find all categories
@@ -13,7 +18,15 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  Category.findByPk(req.params.id).then((categoryData) => {
+  Category.findOne({
+    where: {
+      id: req.params.id,
+    },
+    include: {
+      model: Product,
+      attributes: ["id", "product_name", "price", "stock", "category_id"],
+    },
+  }).then((categoryData) => {
     res.json(categoryData);
   });
   // find one category by its `id` value
@@ -21,7 +34,9 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  Category.create(req.body)
+  Category.create({
+    category_name: req.body.categoryData,
+  })
     .then((newCategory) => {
       res.json(newCategory);
     })
@@ -32,16 +47,11 @@ router.post("/", (req, res) => {
 });
 
 router.put("/:id", (req, res) => {
-  Category.update(
-    {
-      category_name: req.boby.category_name,
+  Category.update(req.body, {
+    where: {
+      id: req.params.id,
     },
-    {
-      where: {
-        id: req.params.id,
-      },
-    }
-  )
+  })
     .then((updateCategory) => {
       res.json(updateCategory);
     })
