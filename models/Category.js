@@ -14,7 +14,6 @@ Category.init(
     },
     category_name: {
       type: DataTypes.STRING,
-      type: DataTypes.BOOLEAN,
       allowNull: false,
     },
   },
