@@ -114,10 +114,10 @@ router.put("/:id", (req, res) => {
       id: req.params.id,
     },
   })
-    .then((product) => {
-      // find all associated tags from ProductTag
-      return ProductTag.findAll({ where: { product_id: req.params.id } });
-    })
+    // .then((product) => {
+    //   // find all associated tags from ProductTag
+    //   return ProductTag.findAll({ where: { product_id: req.params.id } });
+    // })
     .then((productTags) => {
       // get list of current tag_ids
       const productTagIds = productTags.map(({ tag_id }) => tag_id);
@@ -141,7 +141,6 @@ router.put("/:id", (req, res) => {
         ProductTag.bulkCreate(newProductTags),
       ]);
     })
-
     .then((updatedProductTags) => res.json(updatedProductTags))
     .catch((err) => {
       res.status(400).json(err);
@@ -149,12 +148,11 @@ router.put("/:id", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-  product
-    .destroy({
-      where: {
-        id: req.params.id,
-      },
-    })
+  Product.destroy({
+    where: {
+      id: req.params.id,
+    },
+  })
     .then((deletedProduct) => {
       res.json(deletedProduct);
     })
