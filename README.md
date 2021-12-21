@@ -4,7 +4,9 @@
 
 ### **Description:**
 
-### **Install and Usage**
+Welcome to <span style="color:orange">e</span> - <span style="color:lightblue">Shopper</span>! Our goal is to provide a simple, small, and functional API with the help of [MySQL2](https://www.npmjs.com/package/mysql) and [Sequelize](https://www.npmjs.com/package/sequelize) to provide a small E-Commerce platform using common "crud" operations (Create, Read, Update, and Delete). In addition to those great tools our Express.js Api uses [dotenv](https://www.npmjs.com/package/dotenv) to store sensitive data, like a user’s MySQL username, password, and database name, using it's environment variables. Our Database reconizes 3
+
+### **Install and Usage:**
 
 #
 
@@ -30,17 +32,23 @@
 
 <span style= "color:green"> **Console Commands;** </span>
 
-<span style="color:yellow">1.</span> npm run seed
+<span style="color:yellow">1.</span> start: "node server.js"
 
-<span style="color:yellow">2.</span> nodemon server.js
+<span style="color:yellow">2.</span> watch: "nodemon server.js"
+
+<span style="color:yellow">2.</span> seed: "node seeds/index.js"
 
 <br>
 
 ### Preview:
 
+"start": "node server.js",
+"watch": "nodemon server.js",
+"seed": "node seeds/index.js"
+
 #
 
-![replace with preveiw](replace with preveiw)
+![Insomnia Preview](Assets\eShopperInsomnia.PNG)
 
 ### **Links**
 
@@ -48,7 +56,7 @@
 
 Video Example:
 <br>
-https://drive.google.com/file/d/1oPiz6XKhNK61GTjaju6UPCSAdVE44Lft/view
+https://drive.google.com/file/d/1iCQEUbSNzkOTdgc50wwX1xmb1wBya7L4/view
 
 GitHub repo:
 <br>
